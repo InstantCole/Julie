@@ -1,0 +1,8 @@
+{{ define "main" }}
+  {{ .Content }}
+  <h3>home.html is working</h3>
+  {{ range site.RegularPages }}
+    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+    {{ .Summary }}
+  {{ end }}
+{{ end }}

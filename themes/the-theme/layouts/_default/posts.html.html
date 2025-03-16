@@ -1,0 +1,9 @@
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+  <h3>posts.html.html is working</h3>
+  {{ .Content }}
+  {{ range .Pages }}
+    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }} in list of posts base template</a></h2>
+    {{ .Summary }}
+  {{ end }}
+{{ end }}
