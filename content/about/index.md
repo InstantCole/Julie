@@ -7,4 +7,4 @@ draft = false
 
 .Content of about.md
 
-Link to the [Gallery Page](Gallery)
+Link to the [Gallery Page](/Julie/gallery)
