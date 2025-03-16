@@ -16,7 +16,7 @@ Renders a menu for the given menu ID.
     <ul class="nav-bar-ul">
       <li id="nav-bar-li-logo">
         {{ with resources.Get "Julie_Ballew_Logo.png"}}
-<a href="/index.html/"><img id="nav-bar-logo" src="{{ .RelPermalink }}" alt="logo"></a>
+<a href="/"><img id="nav-bar-logo" src="{{ .RelPermalink }}" alt="logo"></a>
 {{ end }}
       </li>
       {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
