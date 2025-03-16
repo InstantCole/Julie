@@ -11,3 +11,5 @@ draft = false
     width= 600px
     >}}
 
+Link to the [Gallery Page](/Gallery)
+
