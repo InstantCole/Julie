@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Montserrat&family=Sacramento&display=swap");
+
 
 body {
   color: #313131;
@@ -6,37 +6,35 @@ body {
   line-height: 1.5;
   margin: auto;
   max-width: 768px;
-  background-color: rgb(171, 180, 162);
+  background-color: rgb(231, 230, 227);
 }
 
 main {
-  padding-top: 144px;
+  padding-top: 1rem;
   padding-right: 2rem;
   padding-left: 2rem;
-  background-color: rgb(0, 214, 132);
+  padding-bottom: 4rem;
+  background-color: white;
 
 }
 
 header {
   width: 100%;
-  background-color: rgb(116, 125, 107);
 
 }
 
 footer {
   align-items: center;
   border-top: 1px solid #09002e;
-  margin-top: 1rem;
   padding-right: 2rem;
   padding-left: 2rem;
-  background-color: rgb(181, 186, 141);
+  padding-top: 1rem;
+  padding-bottom: 1rem;;
+  background-color: rgb(255, 246, 218);
 
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+
 
 
 h1 {
@@ -49,105 +47,67 @@ h3 {
 
 .top-nav-container {
   display: flex;
+  background-color: rgb(255, 246, 218);
+  border-bottom: 1px solid #09002e;
 }
 
 .top-nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-end;
   width: 100%;
-  background-color: rgb(255, 246, 218);
-  border-bottom: 1px solid #09002e;
   margin: auto;
 }
 
 .top-nav a {
   display: flex;
-  align-self: flex-end;
-  text-align: center;
-  padding: 14px 16px;
+  color: #000000;
   text-decoration: none;
-  font-size: 16px;
-  font-family: "Merriweather Sans", sans-serif;
+  font-size: 20px;
+  font-family: "Athiti", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.top-nav nav {
+  
+  width: 100%;
+  white-space: nowrap;
+  padding: 0px 0px 12px 0px;
 }
 
 
 .top-nav-logo {
   display: flex;
+  padding: 12px;
 }
 
 .top-nav-buttons {
   display: flex;
+  justify-content: space-between;
+ 
+}
+
+.divider {
+  margin: 6px 0px;
+  border-left: 1px solid #09002e;
 }
 
 
 
-#nav-bar-logo{
-  width: 320px;
-}
 
-#burger-menu-icon {
-  display: none;
-  background-color: green;
-}
-
-@media screen and (max-width: 750px) {
-  #nav-bar-logo{
-    width:240px;
-   
-  }
-}
-
-@media screen and (max-width: 680px) {
-
-  .top-nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    background-color: rgb(255, 246, 218);
-    border-bottom: 1px solid #09002e;
-  }
-
-  
-
-  #nav-bar-logo{
-    width:240px;
-   
-  }
-
-}
-
-@media screen and (max-width: 500px) {
-
-  .top-nav a:not(:first-child) {display: none;}
-
-  .top-nav-buttons{
-    width: 100%;
-    display: flex;
-    justify-content:space-evenly;
-  }
-
-  #burger-menu-icon {
-    display:block;
-    background-color: red;
-  }
+.top-nav .active:not(:first-child){
+  border-bottom: 1px solid #09002e;
 
 }
 
 
-.active {
-  background-color: rgb(156, 115, 0);
-  color: #ffffff;
-}
-
-.top-bar {
+/* .top-bar {
   float: right;
   border-left: 1px solid #bbb;
   color:#000000;
 
-}
+} */
 
 .nav-bar-li:last-child {
   border-left: none;
@@ -162,9 +122,92 @@ h3 {
   padding: 14px 16px;
 }
 
-.nav-bar-li a:hover {
-  background-color: rgb(158, 132, 18);
-  color: white;
+.top-nav a:hover {
+  border-bottom: 1px solid #09002e;
 }
+
+#nav-bar-logo{
+  width: 320px;
+  margin-right: 25px;
+}
+
+#burger-menu-icon {
+  display: none;
+}
+
+@media screen and (max-width: 775px) {
+  #nav-bar-logo{
+    width:200px;
+    margin-right: 50px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+
+  .top-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items: center;
+    width: 100%;
+  }
+
+  .top-nav nav {
+    width: 90%;
+    padding: 12px 20px 10px 20px;
+  }
+
+
+  .divider {
+    margin: 5px 0px;
+    
+  }
+
+  #nav-bar-logo{
+    width:240px;
+    margin: 0px;
+  }
+
+}
+
+@media screen and (max-width: 420px) {
+
+  .top-nav nav {
+    display: flex;
+  }
+
+  .top-nav {
+    flex-direction: row;
+    justify-content:flex-end;
+    align-items: flex-end;
+    width: 100%;
+  }
+
+  #nav-bar-logo{
+    width:200px;
+    margin: 0px;
+  }
+
+  .top-nav nav {
+    padding: 0px;
+    justify-content: flex-end;
+  }
+
+  .top-nav-buttons {
+    display: none;
+  }
+
+ 
+
+  #burger-menu-icon {
+    display:block;
+    padding: 12px 24px;
+    
+  }
+
+  
+
+}
+
 
 

@@ -8,7 +8,7 @@ draft = false
     src="bryce-canyon.jpg" link="bryce-canyon.jpg"
     alt="AAAAAHHHHHH!!!"
     caption="julie"
-    width= 600px
+    width= 150px
     >}}
 
 Link to the [Gallery Page](/Julie/gallery/)
