@@ -18,13 +18,15 @@ Renders a menu for the given menu ID.
         <a href="/Julie/index.html"><img id="nav-bar-logo" src="{{ .RelPermalink }}" alt="logo"></a>
       {{ end }}
     </div>
-    <nav>
-      <div class="top-nav-buttons">
+    <nav id="">
+      <div class="top-nav-buttons" id="myTopnav">
         {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
         
       </div>
-      
+      <a href="javascript:void(0);" id="burger-menu-icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i></a>
     </nav>
+    
   </div>
 </div>
 {{- end }}
