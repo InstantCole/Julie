@@ -5,11 +5,11 @@ draft = false
 +++
 
 {{< figure 
-    src="bryce-canyon.jpg" link="image.jpg"
+    src="bryce-canyon.jpg" link="bryce-canyon.jpg"
     alt="AAAAAHHHHHH!!!"
     caption="julie"
     width= 600px
     >}}
 
-Link to the [Gallery Page](/Gallery)
+Link to the [Gallery Page](/Julie/gallery/)
 

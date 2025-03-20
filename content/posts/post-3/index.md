@@ -10,7 +10,7 @@ Occaecat aliqua consequat laborum ut ex aute aliqua culpa quis irure esse magna 
 ![Bryce Canyon National Park](bryce-canyon.jpg "Bryce Canyon Picarino")
 
 {{< figure 
-    src="bryce-canyon.jpg" link="image.jpg"
+    src="bryce-canyon.jpg" link="bryce-canyon.jpg"
     alt="AAAAAHHHHHH!!!"
     width= 600px
     >}}

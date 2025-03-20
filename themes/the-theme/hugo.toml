@@ -1,26 +1,26 @@
-baseURL = 'https://instantcole.github.io/Julie/'
+baseURL = 'https://instantcole.github.io'
 languageCode = 'en-US'
 title = 'My New Hugo Site'
 
 [[menus.main]]
 name = 'Home'
 pageRef = '/'
-weight = 40
+weight = 10
 
 [[menus.main]]
 name = 'Meet Us'
 pageRef = '/about'
-weight = 30
+weight = 20
 
 [[menus.main]]
 name = 'Resources'
 pageRef = '/resources'
-weight = 20
+weight = 30
 
 [[menus.main]]
 name = 'Workshops'
 pageRef = '/workshops'
-weight = 10
+weight = 40
 
 
 [taxonomies]

@@ -11,19 +11,22 @@ Renders a menu for the given menu ID.
 {{- $menuID := .menuID }}
 
 {{- with index site.Menus $menuID }}
-  <nav>
-    <div class="nav-bar-wrapper">
-    <ul class="nav-bar-ul">
-      <li id="nav-bar-li-logo">
-       
-        {{ with resources.Get "Julie_Ballew_Logo.png"}}
-<a href="/Julie/index.html"><img id="nav-bar-logo" src="{{ .RelPermalink }}" alt="logo"></a>
-{{ end }}
-      </li>
-      {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
-    </ul>
+<div class="top-nav-container">
+  <div class="top-nav">
+    <div class="top-nav-logo">
+      {{ with resources.Get "Julie_Ballew_Logo.png"}}
+        <a href="/Julie/index.html"><img id="nav-bar-logo" src="{{ .RelPermalink }}" alt="logo"></a>
+      {{ end }}
+    </div>
+    <nav>
+      <div class="top-nav-buttons">
+        {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
+        <a href="javascript:void(0);" id="burger-menu-icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i></a>
+      </div>
+    </nav>
   </div>
-  </nav>
+</div>
 {{- end }}
 
 {{- define "partials/inline/menu/walk.html" }}
@@ -41,7 +44,7 @@ Renders a menu for the given menu ID.
         {{- $name = . }}
       {{- end }}
     {{- end }}
-    <li class="nav-bar-li">
+    
       <a
         {{- range $k, $v := $attrs }}
           {{- with $v }}
@@ -50,10 +53,8 @@ Renders a menu for the given menu ID.
         {{- end -}}
       >{{ $name }}</a>
       {{- with .Children }}
-        <ul>
           {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
-        </ul>
       {{- end }}
-    </li>
   {{- end }}
+ 
 {{- end }}

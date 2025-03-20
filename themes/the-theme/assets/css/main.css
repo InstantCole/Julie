@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Montserrat&family=Sacramento&display=swap");
+
 body {
   color: #313131;
   font-family: sans-serif;
@@ -45,48 +47,93 @@ h3 {
   color:rgb(250, 8, 60)
 }
 
+.top-nav-container {
+  display: flex;
+}
 
-.nav-bar-wrapper{
-  position: fixed;
-  top: 0;
-  left: 0;
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
   width: 100%;
-  max-height: 120px;
-  background-color: rgb(252, 246, 238);
+  background-color: rgb(255, 246, 218);
   border-bottom: 1px solid #09002e;
+  margin: auto;
 }
 
-.nav-bar-ul {
-  max-width: 1290px;
-  margin-right: 2rem;
-  margin-left: 2rem;
-  list-style-type: none;  
+.top-nav a {
+  display: flex;
+  align-self: flex-end;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: "Merriweather Sans", sans-serif;
 }
 
-#nav-bar-li-logo {
-  float: left;
-  width: 33.33%;
-  margin: 0;
-  padding: 0;
+
+.top-nav-logo {
+  display: flex;
 }
+
+.top-nav-buttons {
+  display: flex;
+}
+
+
 
 #nav-bar-logo{
-  width:100%;
- 
+  width: 320px;
+}
+
+#burger-menu-icon {
+  display: none;
+  background-color: green;
 }
 
 @media screen and (max-width: 750px) {
-
-  #nav-bar-li-logo {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-  }
-
   #nav-bar-logo{
-    width:50%;
+    width:240px;
    
   }
+}
+
+@media screen and (max-width: 680px) {
+
+  .top-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(255, 246, 218);
+    border-bottom: 1px solid #09002e;
+  }
+
+  
+
+  #nav-bar-logo{
+    width:240px;
+   
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+
+  .top-nav a:not(:first-child) {display: none;}
+
+  .top-nav-buttons{
+    width: 100%;
+    display: flex;
+    justify-content:space-evenly;
+  }
+
+  #burger-menu-icon {
+    display:block;
+    background-color: red;
+  }
+
 }
 
 
@@ -95,7 +142,7 @@ h3 {
   color: #ffffff;
 }
 
-.nav-bar-li {
+.top-bar {
   float: right;
   border-left: 1px solid #bbb;
   color:#000000;
