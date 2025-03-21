@@ -12,11 +12,13 @@
 {{- end }}
 <script>
   function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "top-nav-buttons") {
-      x.className += " responsive";
+    
+    var y = document.getElementById("responsive-menu");
+    if(y.className === "hidden-menu"){
+      y.className += " show-hidden";
     } else {
-      x.className = "top-nav-buttons";
+      y.className = "hidden-menu";
     }
+    
   }
 </script>

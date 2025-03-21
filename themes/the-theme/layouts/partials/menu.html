@@ -20,7 +20,7 @@ Renders a menu for the given menu ID.
     </div>
     <nav id="">
       <div class="top-nav-buttons" id="myTopnav">
-        {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
+        {{- partial "top-nav/menu/walk.html" (dict "page" $page "menuEntries" .) }}
         
       </div>
       <a href="javascript:void(0);" id="burger-menu-icon" onclick="myFunction()">
@@ -29,9 +29,15 @@ Renders a menu for the given menu ID.
     
   </div>
 </div>
+<div class="hidden-menu" id="responsive-menu">
+  <nav>
+    {{- partial "hidden/menu/walk.html" (dict "page" $page "menuEntries" .) }}
+  </nav>
+
+</div>
 {{- end }}
 
-{{- define "partials/inline/menu/walk.html" }}
+{{- define "partials/top-nav/menu/walk.html" }}
   {{- $page := .page }}
   {{- range .menuEntries }}
     {{- $attrs := dict "href" .URL }}
@@ -62,6 +68,36 @@ Renders a menu for the given menu ID.
       <!-- {{- with .Children }}
           {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
       {{- end }} -->
+  {{- end }}
+ 
+{{- end }}
+
+{{- define "partials/hidden/menu/walk.html" }}
+  {{- $page := .page }}
+  {{- range .menuEntries }}
+    {{- $attrs := dict "href" .URL }}
+    {{- if $page.IsMenuCurrent .Menu . }}
+      {{- $attrs = merge $attrs (dict "class" "active" "aria-current" "page") }}
+    {{- else if $page.HasMenuCurrent .Menu .}}
+      {{- $attrs = merge $attrs (dict "class" "ancestor" "aria-current" "true") }}
+    {{- end }}
+    {{- $name := .Name }}
+    {{- with .Identifier }}
+      {{- with T . }}
+        {{- $name = . }}
+      {{- end }}
+    {{- end }}
+    <div class="hidden-menu-item">
+      <a
+        {{- range $k, $v := $attrs }}
+          {{- with $v }}
+            {{- printf " %s=%q" $k $v | safeHTMLAttr }}
+          {{- end }}
+        {{- end -}}
+      >{{ $name }}</a>
+     
+    </div>
+      
   {{- end }}
  
 {{- end }}
