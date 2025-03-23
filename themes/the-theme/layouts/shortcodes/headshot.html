@@ -1,0 +1,17 @@
+{{- with .Page.Resources.Get (.Get "path") }}
+  <div class="bio-container">
+    {{- with .Process "fill 200x200 center q100 jpg" -}}
+      <div class="bio-headshot">
+        <img class="headshot-img" src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{ $.Get "alt" }}">
+      </div>
+    {{- end }}
+    <div class="bio-content">
+      <h2>{{ $.Get "name" }}</h2>
+      <p>{{ $.Get "title" }}</p>
+      <p>
+      {{- with $.Get "bio"}}{{ . | safeHTML}}
+      </p>
+      {{end}}
+    </div>
+  </div>
+{{- end -}}
