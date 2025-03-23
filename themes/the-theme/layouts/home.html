@@ -1,4 +1,29 @@
 {{ define "main" }}
-  {{ .Content }}
+{{ with resources.Get "missoula-mountains.jpg"}}
+<div class="main-content" id="main-background-image-content" style="background-image: url({{ .RelPermalink | safeCSS}}); background-position-y: 100px; background-size: cover; background-repeat: no-repeat; background-blend-mode: multiply; background-color: #71836e; background-attachment: fixed;">
+  {{ $.Content }}
+</div>
+{{end}}
   
+<div class="services-home main-content">
+  <div class="services-description">
+  <h1>Services</h1>
+  <p>What makes us great and the services we have.</p>
+  </div>
+  <div class="services-blurbs-container">
+    <div class="services-blurb">
+      <h4>Blurb 1</h4>
+      <p>All about blurb 1 and everything it entails yada yada yada. All about blurb 1 and everything it entails yada yada yada.</p>
+    </div>
+    <div class="services-blurb">
+      <h4>Blurb 2</h4>
+      <p>All about blurb 2 and everything it entails yada yada yada. All about blurb 1 and everything it entails yada yada yada.</p>
+    </div>
+    <div class="services-blurb">
+      <h4>Blurb 3</h4>
+      <p>All about blurb 3 and everything it entails yada yada yada. All about blurb 1 and everything it entails yada yada yada.</p>
+    </div>
+  </div>
+</div>
 {{ end }}
+

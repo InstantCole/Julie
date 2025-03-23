@@ -8,17 +8,6 @@ draft = false
 
 Welcome to my website! I'm **excited** to get to know you!
 
-We have been in Missoula for 10 years!
+Hi thanks for visting!
 
-> "Testing out a  
-line break"
-
-{{< figure 
-    src="bryce-canyon.jpg" link="bryce-canyon.jpg"
-    alt="AAAAAHHHHHH!!!"
-    caption="julie"
-    width= 150px
-    >}}
-
-Link to the [Gallery Page](/Julie/gallery/)
 
