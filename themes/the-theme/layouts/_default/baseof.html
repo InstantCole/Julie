@@ -13,5 +13,6 @@
   <footer>
     {{ partial "footer.html" . }}
   </footer>
+  {{ if .Params.fadetextscript }} {{ partialCached "head/fade-text.html" . }} {{ end }}
 </body>
 </html>

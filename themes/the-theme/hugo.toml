@@ -12,10 +12,7 @@ name = 'Meet Us'
 pageRef = '/about'
 weight = 20
 
-[[menus.main]]
-name = 'Resources'
-pageRef = '/resources'
-weight = 30
+
 
 [[menus.main]]
 name = 'Workshops'

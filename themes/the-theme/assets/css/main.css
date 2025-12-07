@@ -195,6 +195,8 @@ h3 {
   justify-content: space-between;
   color: white;
   background-color: rgb(58, 98, 60);
+  flex-direction: column;
+  
 }
 
 .services-home h1 {
@@ -204,8 +206,8 @@ h3 {
 
 .services-description {
   padding: 0 12px 0 0;
-  max-width: 300px;
-  min-width: 300px;
+  max-width: 60%;
+  min-width: 60%;
 }
 
 .services-blurbs-container {
@@ -213,22 +215,76 @@ h3 {
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 0px 12px 0 12px;
+  padding: 0;
+  margin: 0;
+}
+
+.fade-in-text {
+  opacity: 0;
+  transition: opacity 0.8s ease-out;
+}
+
+.fade-in-text.is-visible {
+  opacity: 1;
 }
 
 .services-blurb {
-  max-width: 45%;
-  padding: 0 12px 0 12px;
+
+  margin: 0 12px 12px 0;
+  padding: 16px;
+  background-color: #487A4B;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.services-blurb:hover {
+
+  margin: 0 12px 12px 0;
+  padding: 16px;
+  background-color: #265B29;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.fade-in-text {
+  opacity: 0;
+  transition: opacity 0.8s ease-out;
 }
 
 
 
-@media screen and (min-width: 1175px) {
+
+
+
+
+@media screen and (min-width: 1875px) {
   .services-blurb {
     max-width: 30%;
   }
+
 }
 
+
+@media screen and (max-width: 1874px) {
+  
+
+  .services-blurb {
+    max-width: 47%;
+
+  }
+
+}
+
+@media screen and (max-width: 1600px) {
+  
+
+  .services-blurb {
+    max-width: 100%;
+
+  }
+
+ 
+}
 
 
 
@@ -277,10 +333,7 @@ h3 {
     flex-direction: column;
   }
 
-  .services-blurb {
-    max-width: 60%;
-  }
-
+ 
  
 }
 

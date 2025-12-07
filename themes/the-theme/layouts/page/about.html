@@ -1,6 +1,9 @@
 {{ define "main" }}
 <div class="main-content">
   {{ .Content }}
+  <h1>{{ .Path }}</h1>
+</br>
+  <h1>{{ .RelPermalink }}</h1>
   <h3>Custom HTML for about page</h3>
 </div>
 {{ end }}
